@@ -1,0 +1,85 @@
+*coexplorer.txt*    Checkout Explorer: Easily switch between changed SVN files.
+
+================================================================================
+CONTENTS                                                   *coexplorer-contents*
+
+    1. Intro..................................................|coexplorer|
+    2. Functionality............................|coexploror-functionality|
+        2.1 Global commands...................|coexplorer-global-comamnds|
+        2.2 Mappings.................................|coexplorer-mappings|
+    3. About............................................|coexplorer-about|
+    4. License........................................|coexplorer-license|
+
+================================================================================
+1. Intro                                                            *coexplorer*
+
+Checkout explorer makes it easy to switch between SVN files whose statuses have
+changed.  This way, you can focus on the files within the current changeset.
+
+================================================================================
+2. Functionality                                      *coexplorer-functionality*
+
+--------------------------------------------------------------------------------
+2.1 Global comamnds                                 *coexplorer-global-commands*
+
+:CoExp                                                                  *:CoExp*
+    Open a checkout explorer inside the current tab, unless there is already one
+    there.
+
+--------------------------------------------------------------------------------
+2.2 Mappings                                               *coexplorer-mappings*
+
+Global mappings
+
+These mappings are only set when they are not bound yet.
+
+<leader>cs......Open checkout explorer in this tab..............|coexplorer-cs|
+<leader>cc......Close checkout explorer in this tab.............|coexplorer-cc|
+
+Checkout explorer buffer mappings
+
+These mappings are available in the checkout explorer buffer.
+
+q...............Close checkout explorer.........................|coexplorer-q|
+<CR>............Open file.......................................|coexplorer-cr|
+
+--------------------------------------------------------------------------------
+                                                                 *coexplorer-cs*
+
+Open a checkout explorer inside the current tab, unless there is already one
+there.
+
+--------------------------------------------------------------------------------
+                                                                 *coexplorer-cc*
+                                                                 *coexplorer-q*
+
+Close the checkout explorer in the current tab.  No effect if there is no
+checkout explorer open in the current tab.
+
+--------------------------------------------------------------------------------
+                                                                 *coexplorer-cr*
+
+Open the currently selected file inside an open checkout explorer buffer.
+
+--------------------------------------------------------------------------------
+3. About                                                      *coexplorer-about*
+
+    Written by Leroy van Engelen, who could not keep track of SVN statuses of
+    his files.
+
+--------------------------------------------------------------------------------
+4. License                                                  *coexplorer-license*
+
+    Copyright (c) 2013, Leroy van Engelen <leroy dot vanengelen at gmail dot com>
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+    SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+    IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
