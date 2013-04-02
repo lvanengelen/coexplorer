@@ -21,17 +21,19 @@ func! coexplorer#NewView()
         call self._startModify()
 
         let tmpfile = tempname()
-        sil exe '! svn status >> ' . tmpfile
+        sil exe '! svn status -q > ' . tmpfile
 
         let self['_cache'] = []
         for line in readfile(tmpfile)
             let m = matchlist(line, '\v^(\S+)\s+(.*)$')
 
-            if (isdirectory(m[2]) && m[2][-1] != '/')
-                let m[2] .= '/'
-            endif
+            if m != []
+                if (isdirectory(m[2]) && m[2][-1] != '/')
+                    let m[2] .= '/'
+                endif
 
-            call add(self['_cache'], [m[2], m[1]])
+                call add(self['_cache'], [m[2], m[1]])
+            endif
         endfor
 
         call delete(tmpfile)
